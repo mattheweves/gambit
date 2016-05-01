@@ -1,1 +1,58 @@
-<h1>My Goals</h1>
+
+<br />
+<h1 class="text-center">My Goals</h1>
+<br /><br />
+<div class="row booyah-box col-xs-10 col-xs-offset-1">
+    <!-- Personal Development -->
+    <div class="col-xs-4">
+      <h3>PERSONAL DEVELOPMENT</h3>
+      <br />
+      <br />
+      <% @goals.each do |goal| %>
+        <% category = goal.category %>
+        <% if category == "PD" %>
+             <h4><%= goal.title %></h4><br />
+            <%= goal.description %><br />
+            ---------------------------<br />
+            <%= goal.targetdate %><br />
+            <%= goal.finishline %><br />
+            <hr />
+        <% end %>
+      <% end %>
+    </div>
+
+    <!-- Family/Community -->
+    <div class="col-xs-4">
+        <h3>FAMILY & COMMUNITY</h2>
+        <br />
+        <br />
+        <% @goals.each do |goal| %>
+          <% category = goal.category %>
+          <% if category == "FC" %>
+              <h4><%= goal.title %></h4><br />
+              <%= goal.description %><br />
+              ---------------------------<br />
+              <%= goal.targetdate %><br />
+              <%= goal.finishline %><br />
+              <hr />
+          <% end %>
+        <% end %>
+    </div>
+
+    <!-- Professional & Financial -->
+    <div class="col-xs-4">
+        <h3>PROFESSIONAL & FINANCIAL</h3>
+        <br />
+        <br />
+        <% @goals.each do |goal| %>
+          <% category = goal.category %>
+          <% if category == "PF" %>
+              <h4><%= goal.title %></h4><br />
+              <%= goal.description %><br />
+              ---------------------------<br />
+              <%= goal.targetdate %><br />
+              <%= goal.finishline %><br />
+              <hr />
+          <% end %>
+        <% end %>
+      </div>

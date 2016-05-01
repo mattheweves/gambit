@@ -6,4 +6,15 @@ class Goal < ActiveRecord::Base
   validates :targetdate, presence: true
   validates :finishline, presence: true
 
+
+  CATEGORIES = {
+    'Personal Development'       => 'PD',
+    'Family/Community'           => 'FC',
+    'Professional & Financial'   => 'PF'
+  }
+
+  def humanized_category
+    CATEGORIES.invert[self.category]
+  end
+
 end
