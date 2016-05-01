@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   background: url('bg3.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -75,6 +75,7 @@ body {
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding:10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 html,
@@ -105,4 +106,13 @@ body {
 #footer a {
   color:white;
   font-weight:100;
+}
+
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding:8px;
+  margin:10px;
 }
