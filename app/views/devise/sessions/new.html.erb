@@ -1,5 +1,7 @@
-<h2>Log in</h2>
-
+<br /><br />
+<div class="booyah-box col-xs-6 col-xs-offset-3">
+<h2>SIGN IN</h2>
+<br/>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -17,10 +19,11 @@
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
+<br/><br/>
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in" , class: 'btn btn-primary'%>
   </div>
 <% end %>
-
+<br />
 <%= render "devise/shared/links" %>
+</div>
