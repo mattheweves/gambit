@@ -1,0 +1,69 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.navbar {
+  border-radius:0;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar a.navbar-brand {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 28px;
+  color:black;
+}
+
+.hero {
+  background: url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:570px;
+
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+
+
+.frosty {
+  background:rgba(256,256,256, 0.5);
+  color: black;
+}
+
+.frosty h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  text-shadow: rgba(256,256,256,0.95) 1px 1px;
+}
+
+
+.frosty h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  text-shadow: rgba(256,256,256,0.95) 1px 1px;
+}
+
+
+.btn {
+  border-radius: 0;
+}
+
+
+body {
+  background: url('bg3.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+}
