@@ -28,7 +28,12 @@ class GoalsController < ApplicationController
 
   def update
     @goal = Goal.find(params[:id])
+    if @goal.valid?
     @goal.update_attributes(goal_params)
+    redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
 
