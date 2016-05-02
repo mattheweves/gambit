@@ -2,57 +2,239 @@
 <br />
 <h1 class="text-center">My Goals</h1>
 <br /><br />
-<div class="row booyah-box col-xs-10 col-xs-offset-1">
-    <!-- Personal Development -->
-    <div class="col-xs-4">
-      <h3>PERSONAL DEVELOPMENT</h3>
-      <br />
-      <br />
-      <% @goals.each do |goal| %>
-        <% category = goal.category %>
-        <% if category == "PD" %>
-             <h4><%= goal.title %></h4><br />
-            <%= goal.description %><br />
-            ---------------------------<br />
-            <%= goal.targetdate %><br />
-            <%= goal.finishline %><br />
-            <hr />
-        <% end %>
-      <% end %>
-    </div>
 
-    <!-- Family/Community -->
-    <div class="col-xs-4">
-        <h3>FAMILY & COMMUNITY</h2>
-        <br />
-        <br />
-        <% @goals.each do |goal| %>
-          <% category = goal.category %>
-          <% if category == "FC" %>
-              <h4><%= goal.title %></h4><br />
-              <%= goal.description %><br />
-              ---------------------------<br />
-              <%= goal.targetdate %><br />
-              <%= goal.finishline %><br />
-              <hr />
-          <% end %>
-        <% end %>
-    </div>
-
-    <!-- Professional & Financial -->
-    <div class="col-xs-4">
-        <h3>PROFESSIONAL & FINANCIAL</h3>
-        <br />
-        <br />
-        <% @goals.each do |goal| %>
-          <% category = goal.category %>
-          <% if category == "PF" %>
-              <h4><%= goal.title %></h4><br />
-              <%= goal.description %><br />
-              ---------------------------<br />
-              <%= goal.targetdate %><br />
-              <%= goal.finishline %><br />
-              <hr />
-          <% end %>
-        <% end %>
+  <div class="row col-xs-4 col-xs-offset-4">
+      <div class="col-xs-3">
+         <%= link_to 'YEAR 1', '#Year1', class: 'btn btn-info' %>
       </div>
+      <div class="col-xs-3">
+         <%= link_to 'YEAR 2', '#Year2', class: 'btn btn-info' %>
+      </div>
+      <div class="col-xs-3">
+         <%= link_to 'YEAR 5', '#Year5', class: 'btn btn-info' %>
+      </div>
+      <div class="col-xs-3">
+         <%= link_to 'DREAMS', '#DREAMS', class: 'btn btn-info' %>
+      </div>
+  </div>
+
+<br /><br /><br />
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+<div class="progress col-xs-10 col-xs-offset-1">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+    1 YEAR GOALS
+  </div>
+</div>
+
+  <div id="Year1" class="row col-xs-10 col-xs-offset-1">
+          <!-- Personal Development -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <h3 class="panel-title">PERSONAL DEVELOPMENT</h3>
+            </div>
+            <div class="panel-body">
+                <% @goals.each do |goal| %>
+                  <% if goal.category == "PD" && goal.targetdate <= Date.today + 1.year %>
+                     <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                      <%= goal.description %><br />
+                      ---------------------------<br />
+                      Target Date: <%= goal.targetdate %><br />
+                      Finish Line: <%= goal.finishline %><br />
+                      <hr />
+                  <% end %>
+                <% end %>
+             </div>
+          </div>
+        </div>
+
+          <!-- Family/Community -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">FAMILY & COMMUNITY</h3>
+           </div>
+            <div class="panel-body">
+                  <% @goals.each do |goal| %>
+                    <% if goal.category == "FC" && goal.targetdate <= Date.today + 1.year %>
+                    <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                    <%= goal.description %><br />
+                    ---------------------------<br />
+                    Target Date: <%= goal.targetdate %><br />
+                    Finish Line: <%= goal.finishline %><br />
+                    <hr />
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+          <!-- Professional & Financial -->
+       <div class="col-xs-4">
+          <div class="panel panel-default">
+               <div class="panel-heading">
+               <h3 class="panel-title">PROFESSIONAL & FINANCIAL</h3>
+               </div>
+                <div class="panel-body">
+                  <% @goals.each do |goal| %>
+                    <% if goal.category == "PF" && goal.targetdate <= Date.today + 1.year %>
+                        <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                        <%= goal.description %><br />
+                        ---------------------------<br />
+                        Target Date: <%= goal.targetdate %><br />
+                        Finish Line: <%= goal.finishline %><br />
+                        <hr />
+                    <% end %>
+                  <% end %>
+                </div>
+           </div>
+        </div>
+  </div>
+
+<div class="progress col-xs-10 col-xs-offset-1">
+  <div class="progress-bar" role="progressbar2" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    2 YEAR GOALS
+  </div>
+</div>
+
+<div id="Year2" class="row col-xs-10 col-xs-offset-1">
+          <!-- Personal Development -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <h3 class="panel-title">PERSONAL DEVELOPMENT</h3>
+            </div>
+            <div class="panel-body">
+                <% @goals.each do |goal| %>
+                  <% if goal.category == "PD" && goal.targetdate <= Date.today + 2.year && goal.targetdate > Date.today + 1.year %>
+                       <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                      <%= goal.description %><br />
+                      ---------------------------<br />
+                      Target Date: <%= goal.targetdate %><br />
+                      Finish Line: <%= goal.finishline %><br />
+                      <hr />
+                  <% end %>
+                <% end %>
+             </div>
+          </div>
+        </div>
+
+          <!-- Family/Community -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">FAMILY & COMMUNITY</h3>
+           </div>
+            <div class="panel-body">
+              <% @goals.each do |goal| %>
+                <% if goal.category == "FC" && goal.targetdate <= Date.today + 2.year && goal.targetdate > Date.today + 1.year %>
+                    <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                    <%= goal.description %><br />
+                    ---------------------------<br />
+                    Target Date: <%= goal.targetdate %><br />
+                    Finish Line: <%= goal.finishline %><br />
+                    <hr />
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+          <!-- Professional & Financial -->
+       <div class="col-xs-4">
+          <div class="panel panel-default">
+               <div class="panel-heading">
+               <h3 class="panel-title">PROFESSIONAL & FINANCIAL</h3>
+               </div>
+                <div class="panel-body">
+                  <% @goals.each do |goal| %>
+                    <% if goal.category == "PF" && goal.targetdate <= Date.today + 2.year && goal.targetdate > Date.today + 1.year %>
+                        <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                        <%= goal.description %><br />
+                        ---------------------------<br />
+                        Target Date: <%= goal.targetdate %><br />
+                        Finish Line: <%= goal.finishline %><br />
+                        <hr />
+                    <% end %>
+                  <% end %>
+                </div>
+           </div>
+        </div>
+</div>
+
+<div class="progress col-xs-10 col-xs-offset-1">
+  <div class="progress-bar" role="progressbar2" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+    5 YEAR GOALS
+  </div>
+</div>
+
+<div id="Year5" class="row col-xs-10 col-xs-offset-1">
+          <!-- Personal Development -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <h3 class="panel-title">PERSONAL DEVELOPMENT</h3>
+            </div>
+            <div class="panel-body">
+                <% @goals.each do |goal| %>
+                  <% if goal.category == "PD" && goal.targetdate <= Date.today + 5.year && goal.targetdate > Date.today + 2.year %>
+                       <h4>
+                      <%= link_to goal.title, goal_path(goal) %></h4><br />
+                      <%= goal.description %><br />
+                      ---------------------------<br />
+                      Target Date: <%= goal.targetdate %><br />
+                      Finish Line: <%= goal.finishline %><br />
+                      <hr />
+                  <% end %>
+                <% end %>
+             </div>
+          </div>
+        </div>
+
+          <!-- Family/Community -->
+        <div class="col-xs-4">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">FAMILY & COMMUNITY</h3>
+           </div>
+            <div class="panel-body">
+              <% @goals.each do |goal| %>
+                <% if goal.category == "FC" && goal.targetdate <= Date.today + 5.year && goal.targetdate > Date.today + 2.year %>
+                    <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                    <%= goal.description %><br />
+                    ---------------------------<br />
+                    Target Date: <%= goal.targetdate %><br />
+                    Finish Line: <%= goal.finishline %><br />
+                    <hr />
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+          <!-- Professional & Financial -->
+       <div class="col-xs-4">
+          <div class="panel panel-default">
+               <div class="panel-heading">
+               <h3 class="panel-title">PROFESSIONAL & FINANCIAL</h3>
+               </div>
+                <div class="panel-body">
+                  <% @goals.each do |goal| %>
+                    <% if goal.category == "PF" && goal.targetdate <= Date.today + 5.year && goal.targetdate > Date.today + 2.year %>
+                        <h4><%= link_to goal.title, goal_path(goal) %></h4><br />
+                        <%= goal.description %><br />
+                        ---------------------------<br />
+                        Target Date: <%= goal.targetdate %><br />
+                        Finish Line: <%= goal.finishline %><br />
+                        <hr />
+                    <% end %>
+                  <% end %>
+                </div>
+           </div>
+        </div>
+</div>
+
+<div class="progress col-xs-10 col-xs-offset-1">
+  <div class="progress-bar progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+  DREAMS  
+  </div>
+</div>
+
+</div>
