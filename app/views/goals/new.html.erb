@@ -1,13 +1,16 @@
 <br />
 <div class="booyah-box col-xs-8 col-xs-offset-2">
-  <h1> - NEW GOAL - </h1>
+  <h3><center> - NEW GOAL - </center></h3>
     <%= simple_form_for @goal, url: goals_path do |f| %>
-    <%= f.input :category, as: :select, collection: Goal::CATEGORIES %>
+    <div class="col-xs-4">
+      <%= f.input :category, as: :select, collection: Goal::CATEGORIES %>
+    </div><br /><br /><br /><br />
     <%= f.input :title, class: 'form-control',required: false,autofocus: true  %>
     <%= f.input :description, class: 'form-control',required: false,autofocus: true  %>
-    <%= f.input :targetdate, class: 'form-control',required: false,autofocus: true  %>
-    <%= f.input :finishline, class: 'form-control response-project',required: false,autofocus: true  %>
+    <div class="col-xs-4"><%= f.input :targetdate, class: 'form-control',required: false,autofocus: true  %></div>
+    <br /><br /><br /><br />    <br /><br /><br /><br />
 
+    <%= f.input :finishline, class: 'form-control response-project',required: false,autofocus: true  %>
     <br />
     <%= f.submit "CREATE", class: 'btn btn-primary' %>
     <br />
@@ -15,6 +18,3 @@
   </div>
   </form>
 </div>
-
-
-

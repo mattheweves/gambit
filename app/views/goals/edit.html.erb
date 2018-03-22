@@ -1,7 +1,7 @@
 <br />
 <div class="booyah-box col-xs-8 col-xs-offset-2">
   <h1> - EDIT GOAL - </h1>
-    <%= simple_form_for @goal, url: goals_path do |f| %>
+    <%= simple_form_for @goal do |f| %>
     <%= f.input :category, as: :select, collection: Goal::CATEGORIES %>
     <%= f.input :title, class: 'form-control',required: false,autofocus: true  %>
     <%= f.input :description, class: 'form-control',required: false,autofocus: true  %>

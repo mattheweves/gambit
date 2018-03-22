@@ -8,9 +8,16 @@ class Goal < ActiveRecord::Base
 
 
   CATEGORIES = {
-    'Personal Development'       => 'PD',
-    'Family/Community'           => 'FC',
-    'Professional & Financial'   => 'PF'
+    'Spiritual'       => 'SP',
+    'Intellectual'    => 'IN',
+    'Emotional'       => 'EM',
+    'Physical'        => 'PH',
+    'Marital'         => 'MA',
+    'Parental'        => 'PA',
+    'Social'          => 'SO',
+    'Vocational'      => 'VO',
+    'Avocational'     => 'AV',
+    'Financial'       => 'FI'
   }
 
   def humanized_category
