@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: gambit_production
-  username: gambit
-  password: <%= ENV['KIDFOAPI_DATABASE_PASSWORD'] %>
