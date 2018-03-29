@@ -10,7 +10,8 @@
     <div class="col-xs-4"><%= f.input :targetdate, class: 'form-control',required: false,autofocus: true  %></div>
     <br /><br /><br /><br />    <br /><br /><br /><br />
 
-    <%= f.input :finishline, class: 'form-control response-project',required: false,autofocus: true  %>
+    <%= f.input :finishline, label: 'Finish Line: Clearly describe what it looks like to complete this goal', class: 'form-control response-project',required: false,autofocus: true  %>
+
     <br />
     <%= f.submit "CREATE", class: 'btn btn-primary' %>
     <br />
