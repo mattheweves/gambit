@@ -2,7 +2,7 @@ class GoalsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @goals = Goal.all
+    @goals = current_user.goals.all
   end
 
   def new
