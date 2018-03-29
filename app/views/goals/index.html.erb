@@ -27,7 +27,7 @@
           <!-- Goals -->
         <% @goals.each do |goal| %>
           <% if goal.targetdate && goal.targetdate.between?(Date.today, Date.today + 1.year) %>
-            <div class="col-xs-3">
+            <div class="col-xs-12">
               <div class="panel panel-default">
                 <div class="panel-heading">
                 <h3 class="panel-title"><%= goal.humanized_category %></h3>
@@ -56,7 +56,7 @@
 <div id="Dreams" class="row col-xs-10 col-xs-offset-1">
   <% @goals.each do |goal| %>
   <% if goal.targetdate && goal.targetdate > Date.today + 1.year %>
-          <div class="col-xs-3">
+          <div class="col-xs-6">
             <div class="panel panel-default">
               <div class="panel-heading">
               <h3 class="panel-title"><%= goal.humanized_category %></h3>
@@ -85,7 +85,7 @@
 <div id="YearPast" class="row col-xs-10 col-xs-offset-1">
   <% @goals.each do |goal| %>
   <% if goal.targetdate && goal.targetdate < Date.today %>
-          <div class="col-xs-3">
+          <div class="col-xs-6">
             <div class="panel panel-default">
               <div class="panel-heading">
               <h3 class="panel-title"><%= goal.humanized_category %></h3>
