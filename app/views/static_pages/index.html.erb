@@ -8,7 +8,9 @@
     <br />
     <h2>Based on "My Best Year Ever"</h2>
     <br />
-    <%= link_to 'Begin Your Journey', '#', class: 'btn btn-success' %>
+    <% if !user_signed_in? %>
+      <%= link_to 'Begin Your Journey', new_user_registration_path, class: 'btn btn-success' %>
+    <% end %>
     <br /><br />
   </div>
 </div>
